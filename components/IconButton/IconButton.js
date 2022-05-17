@@ -1,15 +1,30 @@
-export default function IconButton(props) {
-    let style = `btn-${props.variant} shadow bg-gradient`;
+const React = require("react");
 
-    if(props.size){
-        style += `btn-${size}`;
-    } else {
-        style += 'btn';
+class IconButton extends React.Component {
+    constructor(props) {
+        super(props);
     }
 
-    let icon = `fas fa-${props.icon}`;
+    render() {
+        let style = `btn-${this.props.variant} shadow bg-gradient`;
 
-    return (
-        `<button class=${style}><i class=${icon}></i> ${props.text}</button>`
-    );
+        if (props.size) {
+            style += `btn-${this.props.size}`;
+        } else {
+            style += 'btn';
+        }
+
+        let icon = `fas fa-${this.props.icon}`;
+
+        return (
+            React.createElement(
+                'button',
+                {className: style},
+                this.props.text,
+                React.createElement('i', {className: icon})
+            )
+        );
+    }
 }
+
+export default IconButton;

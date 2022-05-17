@@ -1,13 +1,21 @@
-export default function Button(props) {
-    let style = `btn-${props.variant} shadow bg-gradient`;
+const React = require("react");
 
-    if(props.size){
-        style += `btn-${size}`;
-    } else {
-        style += 'btn';
+class Button extends React.Component {
+    constructor(props) {
+        super(props);
     }
 
-    return (
-        `<button class=${style}>${props.text}</button>`
-    );
+    render() {
+        let style = `btn-${this.props.variant} shadow bg-gradient`;
+
+        if (props.size) {
+            style += `btn-${this.props.size}`;
+        } else {
+            style += 'btn';
+        }
+
+        return (React.createElement('button', {className: style}, this.props.text));
+    }
 }
+
+export default Button;
