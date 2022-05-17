@@ -1,6 +1,6 @@
 {
   "name": "solis-bootstrap",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Bootstrap based library for React.js customized to Sistemas Solís",
   "main": "index.js",
   "scripts": {
