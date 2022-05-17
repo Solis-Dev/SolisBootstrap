@@ -1,4 +1,5 @@
 {
     "name": "Button",
-    "main": "Button.js"
+    "main": "Button.js",
+    "module": "Button.js"
 }
