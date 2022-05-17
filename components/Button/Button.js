@@ -8,7 +8,7 @@ class Button extends React.Component {
     render() {
         let style = `btn-${this.props.variant} shadow bg-gradient`;
 
-        if (props.size) {
+        if (this.props.size) {
             style += `btn-${this.props.size}`;
         } else {
             style += 'btn';
